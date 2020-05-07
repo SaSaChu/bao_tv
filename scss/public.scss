@@ -1,9 +1,4 @@
-//
-// @author      OA Wu <comdan66@gmail.com>
-// @copyright   Copyright (c) 2015 - 2019, Ginkgo
-// @license     http://opensource.org/licenses/MIT  MIT License
-// @link        https://www.ioa.tw/
-//
+
 
 @import "Ginkgo";
 
@@ -15,12 +10,25 @@ body {
 
   margin: 0;
   padding: 0;
-  color: rgba(90, 90, 90, 1.00);
+  color: black;
 
   font-size: medium;
   text-align: center;
   font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   
-  // 文字染色，背景色、文字色
-  @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+  // // 文字染色，背景色、文字色
+  // @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+44,fff9ce+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 20%,#fff9ce 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 20%,#fff9ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fff9ce',GradientType=0 ); /* IE6-9 */
+}
+
+.test {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
 }
