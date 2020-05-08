@@ -12,28 +12,303 @@ body {
   padding: 0;
   color: black;
 
-  font-size: medium;
+  font-size: 12px;
   text-align: center;
   font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   
   // // 文字染色，背景色、文字色
   // @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+44,fff9ce+100 */
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #ffffff 20%,#fff9ce 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #ffffff 20%,#fff9ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fff9ce',GradientType=0 ); /* IE6-9 */
+  background: #fff9ce; /* Old browsers */
+  
 }
 
-.test {
+.all_boxs {
   display: inline-block;
   width: 100%;
-  height: 100vh;
+
+  background: -moz-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fff9ce',GradientType=0 ); /* IE6-9 */
+
+  .top_boxs {
+    display: inline-block;
+    width: 100%;
+
+    .top {
+      display: inline-block;
+      width: 100%;
+      height: 45px;
+      border-bottom: 1px solid #ff7d2e;
+    }
+
+    .down {
+      display: inline-block;
+      width: 100%;
+
+      .title_boxs {
+        display: inline-block;
+        width: 220px;
+        height: 60px;
+        margin-top: -25px;
+        position: relative;
+
+        // 漸層
+        background: #ff9759; /* Old browsers */
+        background: -moz-linear-gradient(top, #ff9759 0%, #ff9759 48%, #ff8d4c 49%, #ff6000 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ff9759 0%,#ff9759 48%,#ff8d4c 49%,#ff6000 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ff9759 0%,#ff9759 48%,#ff8d4c 49%,#ff6000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9759', endColorstr='#ff6000',GradientType=0 ); /* IE6-9 */
+        
+        // 圓角
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        // 陰影
+        box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+        -webkit-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+        -moz-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+        -o-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+
+        &:before {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          left: -15px;
+          top: 0;
+
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 25px 15px;
+          border-color: transparent transparent #ca6c31 transparent;
+        }
+
+        &:after {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          right: -15px;
+          top: 0;
+
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 25px 0 0 15px;
+          border-color: transparent transparent transparent #ca6c31;
+        }
+
+        img {
+          display: inline-block;
+          width: 100%;
+          max-width: 49px;
+          padding-top: 7px;
+          margin-right: 5px;
+        }
+
+        .title {
+          display: inline-block;
+          color: white;
+          font-size: 1.4rem;
+          font-weight: bold;
+          line-height: 60px;
+        }
+      }
+    }
+  }
+
+
+  .cent_boxs {
+    display: inline-block;
+    width: 100%;
+    padding: 0 35px;
+
+    @include range-width(0, 325px) {
+      padding: 0 20px;
+    }
+
+    .note_box {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid #ff7d2e;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+    }
+
+    .cent_box {
+      display: inline-block;
+      width: 100%;
+      padding-top: 20px;
+      @include clearfix();
+
+      .t_boxs {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        @include clearfix();
+        text-align: left;
+
+        .t_left_box {
+          display: inline-block;
+          width: 35%;
+          float: left;
+
+          &.tr {
+            float: right;
+          }
+        }
+
+        .t_right_box {
+          display: inline-block;
+          width: 65%;
+          float: right;
+
+          &.tl {
+            float: left;
+          }
+        }
+
+        .t_all_box {
+          display: inline-block;
+          width: 100%;
+          @include clearfix();
+          
+          .D3 {
+            display: inline-block;
+            width: calc(100% / 3);
+            float: left;
+          }
+        }
+      }
+    }
+  }
+
 }
 
-.tee {
-  display: inherit;
-  width: 100%;
+
+
+a, button {
+  display: inline-block;
+  min-width: 130px;
+  padding: 8px 0;
+  color: white;
+  font-size: 1.1rem;
+  @include border-radius(5px);
+  outline: 0;
+  border: 0;
+  text-align: center;
+  text-decoration: none;
+
+  // 漸層
+  background: #ff9759; /* Old browsers */
+  background: -moz-linear-gradient(top, #ff9759 0%, #ff9759 48%, #ff8d4c 49%, #ff6000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff9759 0%,#ff9759 48%,#ff8d4c 49%,#ff6000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff9759 0%,#ff9759 48%,#ff8d4c 49%,#ff6000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9759', endColorstr='#ff6000',GradientType=0 ); /* IE6-9 */
+  
+  // 陰影
+  box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+  -moz-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+  -o-box-shadow: 0px 1px 2px 1px rgba(52, 52, 52, .5);
+
+  &.btn_l {
+    float: left;
+  }
+
+  &.btn_r {
+    float: right;
+  }
+
+  &.btn_edit {
+    display: inline-block;
+    width: 90%;
+    min-width: auto;
+    padding: 4px;
+    font-size: 1rem;
+    float: right;
+  }
 }
+
+
+input {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(3px);
+  border: 1px solid rgba(222, 221, 222, 1.00);
+  padding: 5px;
+  color: black;
+  font-size: 1rem;
+
+  &.no_line {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: #afafaf;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #afafaf;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #afafaf;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #afafaf;
+  }
+}
+
+.w63 {
+  display: inline-block;
+  width: 63%;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.pd10 {
+  padding-bottom: 10px;
+}
+
+p {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.red12 {
+  color: red;
+  font-size: 1rem;
+}
+
+.red10 {
+  color: red;
+  font-size: .8rem;
+  padding-top: 5px;
+}
+
+.org13 {
+  color: #ff6000;
+  font-size: 1.1rem;
+}
+
+.l_h30 {
+  line-height: 30px;
+}
+
+.h30 {
+  height: 30px;
+}
+
+.pad_l5 {
+  padding-left: 5px;
+}
+
+
