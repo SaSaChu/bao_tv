@@ -2,11 +2,17 @@
 
 @import "Ginkgo";
 
+html {
+  display: table;
+  height: 100%;
+}
+
 body {
   position: relative;
 
-  display: inline-block;
+  display: table-cell;
   width: 100%;
+  height: 100%;
 
   margin: 0;
   padding: 0;
@@ -22,6 +28,46 @@ body {
   background: #fff9ce; /* Old browsers */
   
 }
+
+
+.black_boxs {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 46, 39, .6);
+
+  &.black_show {
+   display: table-cell;
+  }
+
+  .l_boxs {
+    display: inline-block;
+    width: 80%;
+    padding: 20px 15px;
+    @include border-radius(5px);
+    border: 1px solid rgba(255, 96, 0, .5);
+
+    margin-top: 30%;
+
+    background: -moz-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fff9ce',GradientType=0 ); /* IE6-9 */
+    
+    img {
+      display: inline-block;
+      width: 100%;
+      max-width: 80px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
 
 .all_boxs {
   display: inline-block;
@@ -128,6 +174,13 @@ body {
     width: 100%;
     padding: 0 35px;
 
+    &.fix_box {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      padding: 0 35px;
+    }
+
     @include range-width(0, 325px) {
       padding: 0 20px;
     }
@@ -146,6 +199,10 @@ body {
       width: 100%;
       padding-top: 20px;
       @include clearfix();
+
+      &.no_pt {
+        padding-top: 0;
+      }
 
       .t_boxs {
         display: inline-block;
@@ -184,18 +241,27 @@ body {
             width: calc(100% / 3);
             float: left;
           }
+
+          &.all_s_box {
+            background-color: white;
+            padding: 10px 15px;
+            @include border-radius(5px);
+            border: 1px solid rgba(222, 221, 222, 1.00);
+            height: 60vh;
+            overflow: scroll;
+            overflow-X:hidden; 
+          }
         }
       }
     }
   }
-
 }
 
 
 
 a, button {
   display: inline-block;
-  min-width: 130px;
+  min-width: 110px;
   padding: 8px 0;
   color: white;
   font-size: 1.1rem;
@@ -264,6 +330,27 @@ input {
   }
 }
 
+label {
+  padding: 0;
+  margin-right: 20px;
+  cursor: pointer;
+}
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]+span {
+  display: inline-block;
+  padding-left: 30px;
+  line-height: 20px;
+  background: url(../img/cbx-off.png) no-repeat;
+  user-select: none;
+}
+input[type=checkbox]:checked+span {
+  background: url(../img/cbx-on.png) no-repeat;
+}
+
+
+
 .w63 {
   display: inline-block;
   width: 63%;
@@ -297,6 +384,34 @@ p {
 .org13 {
   color: #ff6000;
   font-size: 1.1rem;
+}
+
+.l_org14 {
+  display: inline-block;
+  width: 100%;
+  color: #ff6000;
+  font-size: 1.2rem;
+}
+
+.l_org13 {
+  display: inline-block;
+  width: 100%;
+  color: #ff6000;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+i {
+  font-style: normal;
+  color: red;
+}
+
+.all_sroll {
+  display: inline-block;
+  width: 100%;
+  color: black;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 
 .l_h30 {

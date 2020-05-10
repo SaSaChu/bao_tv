@@ -6,4 +6,11 @@
  */
  
 $(function() {
+  $(".ok_box").click(function(){
+    $('.black_boxs').addClass("black_show");
+  });
+
+  $(".l_close").click(function(){
+    $('.black_boxs').removeClass("black_show");
+  });
 });
