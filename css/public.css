@@ -49,7 +49,7 @@ input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #afafaf; }
 input::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #afafaf; }
 input:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #afafaf; }
 
-select { display: inline-block; width: 100%; border: 1px solid #deddde; padding: 5px; color: black; font-size: 1rem; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; appearance: none; -moz-appearance: none; -webkit-appearance: none; padding-right: 14px; background: url("https://raw.githubusercontent.com/ourjs/static/gh-pages/2015/arrow.png") no-repeat scroll right center transparent; }
+select { display: inline-block; width: 100%; border: 1px solid #deddde; padding: 5px; color: black; font-size: 1rem; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; appearance: none; -moz-appearance: none; -webkit-appearance: none; padding-right: 14px; background: url("https://raw.githubusercontent.com/ourjs/static/gh-pages/2015/arrow.png") no-repeat scroll right center white; }
 
 select::-ms-expand { display: none; }
 
