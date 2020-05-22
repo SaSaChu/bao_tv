@@ -42,12 +42,12 @@ a.btn_l, button.btn_l { float: left; }
 a.btn_r, button.btn_r { float: right; }
 a.btn_edit, button.btn_edit { display: inline-block; width: 90%; min-width: auto; padding: 4px; font-size: 1rem; float: right; }
 
-input { display: inline-block; width: 100%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #deddde; padding: 5px; color: black; font-size: 1rem; }
-input.no_line { outline: none; }
-input::-webkit-input-placeholder { /* WebKit browsers */ color: #afafaf; }
-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #afafaf; }
-input::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #afafaf; }
-input:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #afafaf; }
+input, select { display: inline-block; width: 100%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #deddde; padding: 5px; color: black; font-size: 1rem; }
+input.no_line, select.no_line { outline: none; }
+input::-webkit-input-placeholder, select::-webkit-input-placeholder { /* WebKit browsers */ color: #afafaf; }
+input:-moz-placeholder, select:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #afafaf; }
+input::-moz-placeholder, select::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #afafaf; }
+input:-ms-input-placeholder, select:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #afafaf; }
 
 label { padding: 0; margin-right: 20px; cursor: pointer; }
 
