@@ -72,6 +72,7 @@ body {
 .all_boxs {
   display: inline-block;
   width: 100%;
+  min-height: 100%;
 
   background: -moz-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #ffffff 20%, #fff9ce 100%); /* Chrome10-25,Safari5.1-6 */
@@ -175,7 +176,7 @@ body {
     padding: 0 35px;
 
     &.fix_box {
-      position: fixed;
+      position: absolute;
       left: 0;
       bottom: 0;
       padding: 0 35px;
